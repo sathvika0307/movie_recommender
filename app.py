@@ -1,24 +1,22 @@
 import streamlit as st
-import requests
 
-st.title("🌦️ Weather Forecast App")
+# Sample movie recommendations by genre
+movie_db = {
+    "Action": ["Mad Max: Fury Road", "John Wick", "Gladiator", "The Dark Knight"],
+    "Comedy": ["Superbad", "Step Brothers", "The Hangover", "Anchorman"],
+    "Drama": ["The Shawshank Redemption", "Forrest Gump", "Fight Club", "The Godfather"],
+    "Sci-Fi": ["Inception", "Interstellar", "The Matrix", "Blade Runner 2049"],
+    "Romance": ["Titanic", "The Notebook", "Pride & Prejudice", "La La Land"],
+}
 
-city = st.text_input("Enter a city name:")
+# Title
+st.title("🎬 Movie Recommendation App")
 
-if city:
-    api_key = "your_openweather_api_key_here"
-    url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
+# Input: User selects a genre
+genre = st.selectbox("Choose your favorite movie genre:", list(movie_db.keys()))
 
-    response = requests.get(url)
-
-    if response.status_code == 200:
-        data = response.json()
-        temp = data['main']['temp']
-        weather = data['weather'][0]['main']
-        desc = data['weather'][0]['description']
-        icon = data['weather'][0]['icon']
-        st.image(f"http://openweathermap.org/img/wn/{icon}@2x.png")
-        st.write(f"**Temperature**: {temp} °C")
-        st.write(f"**Weather**: {weather} - {desc}")
-    else:
-        st.error("City not found. Please try again.")
+# Button to get recommendations
+if st.button("Get Recommendations"):
+    st.write(f"Here are some great {genre} movies you might like:")
+    for movie in movie_db[genre]:
+        st.write(f"- {movie}")
