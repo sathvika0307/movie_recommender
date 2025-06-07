@@ -1,27 +1,24 @@
 import streamlit as st
+import requests
 
-# Title
-st.title("🧮 Simple Calculator App")
+st.title("🌦️ Weather Forecast App")
 
-# Input numbers
-num1 = st.number_input("Enter first number", format="%f")
-num2 = st.number_input("Enter second number", format="%f")
+city = st.text_input("Enter a city name:")
 
-# Select operation
-operation = st.selectbox("Choose operation", ["Add", "Subtract", "Multiply", "Divide"])
+if city:
+    api_key = "your_openweather_api_key_here"
+    url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
 
-# Calculate
-if st.button("Calculate"):
-    if operation == "Add":
-        result = num1 + num2
-    elif operation == "Subtract":
-        result = num1 - num2
-    elif operation == "Multiply":
-        result = num1 * num2
-    elif operation == "Divide":
-        if num2 != 0:
-            result = num1 / num2
-        else:
-            result = "❌ Cannot divide by zero"
-    
-    st.success(f"Result: {result}")
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        data = response.json()
+        temp = data['main']['temp']
+        weather = data['weather'][0]['main']
+        desc = data['weather'][0]['description']
+        icon = data['weather'][0]['icon']
+        st.image(f"http://openweathermap.org/img/wn/{icon}@2x.png")
+        st.write(f"**Temperature**: {temp} °C")
+        st.write(f"**Weather**: {weather} - {desc}")
+    else:
+        st.error("City not found. Please try again.")
