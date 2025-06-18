@@ -1,4 +1,4 @@
-🎬 Project Title: Movie Recommendation Web App
+## **🎬 Project Title: Movie Recommendation Web App**
 
 Built With:
 
