@@ -10,27 +10,27 @@ This is a simple and interactive Movie Recommendation Web App built using Stream
 
 ### **✅ Key Features:**
 
--Interactive UI with Streamlit
+- Interactive UI with Streamlit
 
 User-friendly interface with dropdowns and buttons for interaction.
 
--Genre-Based Movie Suggestions
+- Genre-Based Movie Suggestions
 
 Choose from multiple genres like Action, Comedy, Drama, Sci-Fi, and Romance.
 
--Instant Movie List Output
+- Instant Movie List Output
 
 On selecting a genre and clicking "Get Recommendations", it shows a list of handpicked movies.
 
--Lightweight & Fast
+- Lightweight & Fast
 
 No external database or API calls, making it fast and ideal for demos or learning.
 
--Customizable Dictionary
+- Customizable Dictionary
 
 Movie database stored as a Python dictionary; easy to expand and personalize.
 
--Deployable with One Click
+- Deployable with One Click
 
 Can be deployed to Streamlit Cloud or run locally with a simple command.
 
@@ -40,9 +40,9 @@ A user looking for a good Sci-Fi movie can just select the genre and instantly g
 
 ### **📌 Future Scope (Optional Enhancements):**
 
--Integrate with TMDb or IMDB API for live data and posters
+- Integrate with TMDb or IMDB API for live data and posters
 
--Add user login and favorite list
+- Add user login and favorite list
 
--Build a recommendation engine using machine learning
+- Build a recommendation engine using machine learning
 
