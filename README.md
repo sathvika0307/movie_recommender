@@ -1,14 +1,14 @@
-###🎬 Project Title: Movie Recommendation Web App
+🎬 Project Title: Movie Recommendation Web App
 
-##Built With:
+Built With:
 
 Python, Streamlit
 
-##📝 Project Description:
+📝 Project Description:
 
 This is a simple and interactive Movie Recommendation Web App built using Streamlit. The user selects a movie genre, and the app instantly displays a curated list of popular movies from that category. It serves as a beginner-friendly demo of how to use Streamlit for building user-friendly web interfaces with Python logic on the backend.
 
-##✅ Key Features:
+✅ Key Features:
 
 -Interactive UI with Streamlit
 
@@ -34,11 +34,11 @@ Movie database stored as a Python dictionary; easy to expand and personalize.
 
 Can be deployed to Streamlit Cloud or run locally with a simple command.
 
-##📂 Example Use Case:
+📂 Example Use Case:
 
 A user looking for a good Sci-Fi movie can just select the genre and instantly get top suggestions like Inception, Interstellar, and The Matrix.
 
-##📌 Future Scope (Optional Enhancements):
+📌 Future Scope (Optional Enhancements):
 
 -Integrate with TMDb or IMDB API for live data and posters
 
