@@ -4,6 +4,10 @@
 
 Python, Streamlit
 
+### 🔗 Live Demo  
+
+👉 [Launch Movie Recommender Web App on Streamlit](https://movierecommender-bgb7qbcjagfzdu8uwpbxqe.streamlit.app/)
+
 ### **📝 Project Description:**
 
 This is a simple and interactive Movie Recommendation Web App built using Streamlit. The user selects a movie genre, and the app instantly displays a curated list of popular movies from that category. It serves as a beginner-friendly demo of how to use Streamlit for building user-friendly web interfaces with Python logic on the backend.
